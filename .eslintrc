@@ -1,11 +1,10 @@
 {
   "extends": [
-    "airbnb",
-    "plugin:ava/recommended"
+    "airbnb"
   ],
   "parser": "babel-eslint",
   "plugins": [
-    "ava"
+    "mocha"
   ],
   "env": {
     "browser": true,
@@ -18,7 +17,7 @@
     "classes": true
   },
   "rules": {
-     "comma-dangle": [1, "always-multiline"],
+     "comma-dangle": [0, "always-multiline"],
      "no-underscore-dangle" : 0,
      "max-len": [1, 180, 4],
      "arrow-body-style": [0],
