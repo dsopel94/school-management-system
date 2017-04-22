@@ -11,7 +11,7 @@ const AttendanceSchema = new Schema({
   student: {
     type: ObjectId,
     ref: 'student',
-  },
+  }
 });
 
 module.exports = AttendanceSchema;

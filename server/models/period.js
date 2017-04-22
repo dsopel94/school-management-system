@@ -27,7 +27,8 @@ periodSchema.pre('remove', function callback(next) {
   }, {
     $pull: {
       periods: this._id,
-    },
+    } },
+    { multi: true
   }).then(() => next());
 });
 
