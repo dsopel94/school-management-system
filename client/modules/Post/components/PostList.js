@@ -7,6 +7,7 @@ function PostList(props) {
   return (
     <div className="listView">
       {
+        if (props.posts.length) {
         props.posts.map(post => (
           <PostListItem
             post={post}
@@ -14,6 +15,7 @@ function PostList(props) {
             onDelete={() => props.handleDeletePost(post.cuid)}
           />
         ))
+        }
       }
     </div>
   );

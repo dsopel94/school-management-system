@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Boilerplate project for building Isomorphic apps using React and Redux",
   "scripts": {
-    "test": "cross-env NODE_ENV=test PORT=8080 MONGO_URL=mongodb://localhost:27017/mern-test node_modules/.bin/nyc node --harmony-proxies node_modules/.bin/ava",
+    "test": "cross-env NODE_ENV=test nodemon --exec \"mocha test --recursive --compilers js:babel-register\"",
     "watch:test": "npm run test -- --watch",
     "cover": "nyc npm run test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
@@ -16,10 +16,6 @@
     "slate": "rimraf node_modules && npm install",
     "lint": "eslint client server"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hashnode/mern-starter.git"
@@ -54,6 +50,7 @@
   },
   "devDependencies": {
     "ava": "^0.15.2",
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-webpack-loaders": "^0.7.0",
@@ -65,6 +62,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "chunk-manifest-webpack-plugin": "0.1.0",
     "coveralls": "^2.11.9",
     "css-loader": "^0.23.1",
@@ -79,6 +77,7 @@
     "eslint-plugin-mocha": "^4.9.0",
     "eslint-plugin-react": "^5.1.1",
     "eventsource-polyfill": "^0.9.6",
+    "express": "^4.15.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "jsdom": "^9.2.1",
