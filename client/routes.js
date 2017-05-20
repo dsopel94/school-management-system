@@ -25,7 +25,11 @@ export default (
     <IndexRoute
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
+<<<<<<< HEAD
           cb(null, require('./modules/Post/pages/StudentListPage/StudentIntroPage').default);
+=======
+          cb(null, require('./modules/Post/pages/StudentListPage/StudentListPage').default);
+>>>>>>> 928ccbb194588f035f9433c4fe22c5dc16d566d4
         });
       }}
     />
