@@ -15,3 +15,4 @@ router.route('/students').post(StudentController.addStudent);
 router.route('/students/:cuid').delete(StudentController.deleteStudent);
 
 export default router;
+// just so that you have this file as a template
