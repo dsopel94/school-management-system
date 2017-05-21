@@ -26,7 +26,6 @@ export default (
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
           cb(null, require('./modules/Post/pages/StudentListPage/StudentIntroPage').default);
-          cb(null, require('./modules/Post/pages/StudentListPage/StudentListPage').default);
         });
       }}
     />

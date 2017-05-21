@@ -33,6 +33,9 @@ import Helmet from 'react-helmet';
 import routes from '../client/routes';
 import { fetchComponentData } from './util/fetchData';
 import students from './routes/student.routes';
+import courses from './routes/course.routes';
+import periods from './routes/period.routes';
+import instructors from './routes/instructor.routes';
 import dummyData from './dummyData';
 import serverConfig from './config';
 
@@ -56,6 +59,9 @@ app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist')));
 app.use('/api', students);
+app.use('/api', courses);
+app.use('/api', periods);
+app.use('/api', instructors);
 
 // Render Initial HTML
 const renderFullPage = (html, initialState) => {
