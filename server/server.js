@@ -45,7 +45,7 @@ mongoose.Promise = global.Promise;
 // MongoDB Connection
 mongoose.connect(serverConfig.mongoURL, (error) => {
   if (error) {
-    console.error('Please make sure Mongodb is installed and running!'); // eslint-disable-line no-console
+    console.error('Please make sure Mongodb is installed and running!', serverConfig.mongoURL, error); // eslint-disable-line no-console
     throw error;
   }
 

@@ -1,6 +1,6 @@
 import test from 'ava';
 import { reducerTest } from 'redux-ava';
-import postReducer, { getPost, getPosts } from '../PostReducer';
+import instructorReducer, { getPost, getPosts } from '../InstructorReducer';
 import { addPost, deletePost, addPosts } from '../PostActions';
 
 test('action for ADD_POST is working', reducerTest(
@@ -78,4 +78,3 @@ test('getPost selector', t => {
     { cuid: '123' }
   );
 });
-

@@ -8,9 +8,16 @@ class StudentIntroPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <h1>School Management System</h1>
-        <p>Hi, my name is Damian Sopel. This is a school management app. You can manage a roster of students and courses easily.</p>
+        <form className="login">
+          <label htmlFor="userName">Username:</label>
+          <input id="userName"></input>
+          <label>Password: </label>
+          <input id="password"></input>
+          <button id="signup">Sign Up</button>
+          <button id="login">Login</button>
+        </form>
       </div>
     );
   }

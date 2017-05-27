@@ -10,7 +10,7 @@ import styles from '../../components/PostListItem/PostListItem.css';
 import { fetchPost } from '../../PostActions';
 
 // Import Selectors
-import { getPost } from '../../PostReducer';
+import { getPost } from '../../InstructorReducer';
 
 export function PostDetailPage(props) {
   return (
